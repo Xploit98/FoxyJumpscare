@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>FoxyJumpscare</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <!-- Pass -p:GamePath="..." or set the FIH_GAME_PATH environment variable -->
+    <GamePath Condition="'$(GamePath)' == ''">$(FIH_GAME_PATH)</GamePath>
+  </PropertyGroup>
+
+  <Target Name="CheckGamePath" BeforeTargets="ResolveAssemblyReferences"
+          Condition="'$(GamePath)' == '' Or !Exists('$(GamePath)\BepInEx\interop')">
+    <Error Text="Set GamePath to your Flipping is Hard folder (with BepInEx installed and the game run once). Example: dotnet build -c Release -p:GamePath=&quot;C:\SteamLibrary\steamapps\common\Flipping is Hard&quot;" />
+  </Target>
+
+  <ItemGroup>
+    <Reference Include="BepInEx.Core"><HintPath>$(GamePath)\BepInEx\core\BepInEx.Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP"><HintPath>$(GamePath)\BepInEx\core\BepInEx.Unity.IL2CPP.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(GamePath)\BepInEx\core\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppInterop.Runtime"><HintPath>$(GamePath)\BepInEx\core\Il2CppInterop.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppInterop.Common"><HintPath>$(GamePath)\BepInEx\core\Il2CppInterop.Common.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="$(GamePath)\BepInEx\interop\*.dll" Private="false" />
+  </ItemGroup>
+</Project>

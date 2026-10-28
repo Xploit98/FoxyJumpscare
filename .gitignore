@@ -1,0 +1,12 @@
+bin/
+obj/
+.vs/
+*.user
+# user-supplied media must never be committed
+*.rgba
+*.wav
+*.mp4
+*.png
+*.mkv
+*.webm
+FoxyJumpscare/frames/
