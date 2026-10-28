@@ -10,11 +10,11 @@ Every second the mod rolls a 1 in N chance (default: 1 in 1000, about once every
 
 **This mod does not ship with any video, image or sound.** Without media it will load but show and play nothing. You have to download a clip yourself and convert it:
 
-1. Download the green-screen clip from its original source: <https://www.youtube.com/watch?v=OL94hTjUX7c>
+1. Download the green-screen clip from its source: <https://www.youtube.com/watch?v=OL94hTjUX7c>
 2. Convert it with `convert.ps1` (see [Prepare your media](#prepare-your-media)).
 3. Copy the result into `BepInEx/plugins/FoxyJumpscare/` (see [Install](#install)).
 
-The clip belongs to its original creator and is not part of this project. Please respect the uploader's terms. You can also use any other short green-screen clip you have the right to use.
+The jumpscare footage is derived from Five Nights at Freddy’s 2 and is the property of its respective owners. It is not included in this project and is not covered by this project’s license. This mod is unofficial and not affiliated with or endorsed by the creators of Five Nights at Freddy’s or Flipping is Hard.
 
 ## Requirements
 
