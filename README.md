@@ -2,7 +2,7 @@
 
 A [BepInEx 6](https://builds.bepinex.dev/projects/bepinex_be) (IL2CPP) mod for **Flipping is Hard** that randomly plays a jumpscare overlay with sound while you play.
 
-Every second the mod rolls a 1 in N chance (default: 1 in 1000, about once per hour of play on average). When it hits, a transparent video overlay is drawn over the game and a sound is played. The overlay only appears on your own screen and does not affect other players.
+Every second the mod rolls a 1 in N chance (default: 1 in 1000, about once every 17 minutes of play on average). When it hits, a transparent video overlay is drawn over the game and a sound is played. The overlay only appears on your own screen and does not affect other players.
 
 > **Unofficial fan mod.** Not affiliated with or endorsed by the developers of Flipping is Hard.
 
@@ -87,7 +87,7 @@ Start the game once. It creates the config file.
 | `ChanceDenominator` | `1000` | Each second there is a 1 in N chance of the jumpscare. Set it to `5` to test. |
 | `Fps` | `20` | Playback speed. Must match the fps used when converting. |
 
-Average time between jumpscares is roughly N seconds, for example 4000 is about 67 minutes, 1000 about 17 minutes. It is random, so it can trigger twice in a row or not for hours.
+Average time between jumpscares is roughly N seconds, for example 1000 is about 17 minutes, 4000 about 67 minutes. It is random, so it can trigger twice in a row or not for hours.
 
 ## Troubleshooting
 
