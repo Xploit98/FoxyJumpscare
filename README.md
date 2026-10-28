@@ -4,7 +4,17 @@ A [BepInEx 6](https://builds.bepinex.dev/projects/bepinex_be) (IL2CPP) mod for *
 
 Every second the mod rolls a 1 in N chance (default: 1 in 1000, about once per hour of play on average). When it hits, a transparent video overlay is drawn over the game and a sound is played. The overlay only appears on your own screen and does not affect other players.
 
-> **Unofficial fan mod.** Not affiliated with or endorsed by the developers of Flipping is Hard. **No video or audio is included in this repository.** You supply your own clip (see below).
+> **Unofficial fan mod.** Not affiliated with or endorsed by the developers of Flipping is Hard.
+
+## ⚠️ Important: no video or audio is included
+
+**This mod does not ship with any video, image or sound.** Without media it will load but show and play nothing. You have to download a clip yourself and convert it:
+
+1. Download the green-screen clip from its original source: <https://www.youtube.com/watch?v=OL94hTjUX7c>
+2. Convert it with `convert.ps1` (see [Prepare your media](#prepare-your-media)).
+3. Copy the result into `BepInEx/plugins/FoxyJumpscare/` (see [Install](#install)).
+
+The clip belongs to its original creator and is not part of this project. Please respect the uploader's terms. You can also use any other short green-screen clip you have the right to use.
 
 ## Requirements
 
@@ -12,7 +22,7 @@ Every second the mod rolls a 1 in N chance (default: 1 in 1000, about once per h
 - [BepInEx 6 bleeding-edge, Windows x64, Unity IL2CPP](https://builds.bepinex.dev/projects/bepinex_be), installed next to the game `.exe` and run once, so that `BepInEx/interop/` is generated
 - [.NET SDK](https://dotnet.microsoft.com/download) (to build)
 - [ffmpeg](https://ffmpeg.org/download.html) (to convert your clip)
-- Your own green-screen video clip
+- A green-screen video clip (not included, [download it here](https://www.youtube.com/watch?v=OL94hTjUX7c) or use your own)
 
 ## Build
 
@@ -70,7 +80,7 @@ Start the game once. It creates the config file.
 
 ## Configuration
 
-`BepInEx/config/foxyjumpscare.cfg`
+`BepInEx/config/com.you.foxyjumpscare.cfg`
 
 | Setting | Default | Description |
 |---|---|---|
